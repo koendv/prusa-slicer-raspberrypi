@@ -1,4 +1,4 @@
-#Prusa-slicer for Raspberry Pi 4
+# Prusa-slicer for Raspberry Pi 4
 ![screenshot](screenshot.jpg  "Russian Pokemon dolls")
 
 Build notes for Prusa-slicer, compiled for raspberry pi 4 running 2019-09-26-raspbian-buster. Prusa-slicer is a tool for 3d printing. 
@@ -13,7 +13,7 @@ To remove:
 sudo dpkg -r prusa-slicer
 ```
 The remainder of this document details how to build prusa-slicer on raspbian.
-##Build Notes
+## Build Notes
 Install prerequisites:
 ```
 apt-get update
@@ -28,7 +28,7 @@ cd build
 cmake ../PrusaSlicer-version_2.1.0 -DCMAKE_BUILD_TYPE=Release -DSLIC3R_WX_STABLE=1
 make DESTDIR=$PWD/deb install
 ```
-##Create debian package
+## Create debian package
 Create the debian control file:
 ```
 mkdir deb/DEBIAN
