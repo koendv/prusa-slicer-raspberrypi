@@ -6,6 +6,7 @@ Build notes for Prusa-slicer, compiled for raspberry pi 4 running 2019-09-26-ras
 To install prusa-slicer in /usr/local/bin/prusa-slicer, download the [Debian binary package](https://github.com/koendv/prusa-slicer-raspberrypi/releases/) and install using
 ```
 cd ~/Downloads
+sudo apt-get update
 sudo apt install ./prusa-slicer_2.1.0_armhf.deb
 ```
 To remove:
