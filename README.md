@@ -3,11 +3,11 @@
 
 Build notes for Prusa-slicer, compiled for raspberry pi 4 running 2019-09-26-raspbian-buster. Prusa-slicer is a tool for 3d printing. 
 ## Installation
-To install prusa-slicer in /usr/local/bin/prusa-slicer, download the [Debian binary package](https://github.com/koendv/prusa-slicer-raspberrypi/releases/) and install using
+To install prusa-slicer in /usr/bin/prusa-slicer, download the [Debian binary package](https://github.com/koendv/prusa-slicer-raspberrypi/releases/) and install using
 ```
 cd ~/Downloads
 sudo apt-get update
-sudo apt install ./prusa-slicer_2.1.0_armhf.deb
+sudo apt install ./prusa-slicer_2.1.1_armhf.deb
 ```
 To remove:
 ```
@@ -22,11 +22,11 @@ apt-get install cmake libboost-all-dev libtbb-dev libcurl4-openssl-dev libwxgtk3
 ```
 Download and compile sources:
 ```
-wget https://github.com/prusa3d/PrusaSlicer/archive/version_2.1.0.tar.gz
-tar xvf version_2.1.0.tar.gz
+wget https://github.com/prusa3d/PrusaSlicer/archive/version_2.1.1.tar.gz
+tar xvf version_2.1.1.tar.gz
 mkdir build
 cd build
-cmake ../PrusaSlicer-version_2.1.0 -DCMAKE_BUILD_TYPE=Release -DSLIC3R_WX_STABLE=1
+cmake ../PrusaSlicer-version_2.1.1 -DCMAKE_BUILD_TYPE=Release -DSLIC3R_WX_STABLE=1 -DSLIC3R_FHS=1
 make DESTDIR=$PWD/deb install
 ```
 ## Create debian package
@@ -35,7 +35,7 @@ Create the debian control file:
 mkdir deb/DEBIAN
 cat > deb/DEBIAN/control <<EOD
 Package: prusa-slicer
-Version: 2.1.0
+Version: 2.1.1
 Maintainer: Koen <koen@mcvax.org>
 Priority: optional
 Section: science
@@ -43,7 +43,7 @@ Bugs: https://github.com/koendv/prusa-slicer-raspberrypi/issues
 Homepage: https://github.com/koendv/prusa-slicer-raspberrypi
 Depends: cmake, libboost-all-dev, libtbb-dev, libcurl4, libwxgtk3.0-dev, libeigen3-dev, libglew-dev, libcereal-dev
 Architecture: armhf
-Description: Prusa-Slic3r 2.1.0
+Description: Prusa-Slic3r 2.1.1
  compiled for raspberry pi 4 running 2019-09-26-raspbian-buster[-lite.]
 EOD
 ```
@@ -51,7 +51,7 @@ Create the debian package:
 ```
 fakeroot dpkg-deb -b ./deb/ .
 ```
-This produces the debian package file prusa-slicer_2.1.0_armhf.deb
+This produces the debian package file prusa-slicer_2.1.1_armhf.deb
 
 This completes the build notes.
 
