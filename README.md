@@ -1,5 +1,5 @@
 # Prusa-slicer for 64-bit Raspberry Pi 4
-![screenshot](screenshot.jpg  "Russian Pokemon dolls")
+![screenshot](screenshot.png  "Yet Another Box")
 
 Build notes for Prusa-slicer, compiled for raspberry pi 4 running 2020-08-20-raspios-buster-arm64. Prusa-slicer is a tool for 3d printing. 
 
