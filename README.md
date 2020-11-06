@@ -3,7 +3,7 @@
 
 Build notes for Prusa-slicer, compiled for raspberry pi 4 running 2020-08-20-raspios-buster-arm64. Prusa-slicer is a tool for 3d printing. 
 
-*This is a binary for 64-bit raspberry pi os. If you are running 32-bit raspberry pi os, you can download [32-bit appimages for Prusa-Slicer on raspberry](https://github.com/davidk/PrusaSlicer-ARM.AppImage) instead.*
+*This project is no longer needed. If you are running raspberry pi os, you can download [appimages for Prusa-Slicer on raspberry](https://github.com/davidk/PrusaSlicer-ARM.AppImage) instead.*
 
 ## Installation
 To install prusa-slicer in /usr/bin/prusa-slicer, download the [Debian binary package](https://github.com/koendv/prusa-slicer-raspberrypi/releases/) and install using
